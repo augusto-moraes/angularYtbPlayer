@@ -1,0 +1,16 @@
+li {
+    text-indent: 50px;
+    line-height: 40px;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: #999999;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+}
