@@ -10,6 +10,7 @@ import { VideoViewComponent } from './video-view/video-view.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { HistoryComponent } from './history/history.component';
 import { BookmarksComponent } from './bookmarks/bookmarks.component';
+import { FtFooterComponent } from './ft-footer/ft-footer.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { BookmarksComponent } from './bookmarks/bookmarks.component';
     SidebarComponent,
     HistoryComponent,
     BookmarksComponent,
+    FtFooterComponent,
   ],
   imports: [
     BrowserModule,

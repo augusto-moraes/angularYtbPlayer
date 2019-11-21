@@ -6,9 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./history.component.css']
 })
 export class HistoryComponent implements OnInit {
-
-  constructor() { }
-
+  history = this.getHistory();
+  constructor() { 
+  
+  }
+  getHistory(){
+    let localStorageItem = JSON.parse(localStorage.getItem('history'));
+    return localStorageItem == null ? [] : localStorageItem;
+  }
+  
   ngOnInit() {
   }
 

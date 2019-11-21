@@ -1,14 +1,19 @@
+<div class="centerP">
+    <p *ngIf="youtubeUrl == 'https://www.youtube.com/watch?v=gfiqW1WaGbw'">Hey, this is my recomendation for you. Check it out!!</p>
+    <p><span *ngIf="youtubeUrl == 'https://www.youtube.com/watch?v=gfiqW1WaGbw'">Or</span> Put your youtube video URL in the input bellow:</p>
+</div>
 <div class="form-row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
-        <input type="text" class="form-control" name="youtubeUrl" [(ngModel)]="youtubeUrl" placeholder="Youtube URL" aria-label="Youtube URL" aria-describedby="submit">
+        <input onClick="this.setSelectionRange(0, this.value.length)" type="text" class="form-control" name="youtubeUrl" [(ngModel)]="youtubeUrl" placeholder="Youtube URL" aria-label="Youtube URL" aria-describedby="submit" (keydown)="keyDownFunction($event)">
         <div class="btn-group" role="group" id="btnGroup">
-            <button (click)="runUrl()" class="btn btn-danger" type="button" id="submit">Watch</button>
-            <button (click)="runUrl()" class="btn btn-danger" type="button" id="submit">Watch</button>
-            <button (click)="runUrl()" class="btn btn-danger" type="button" id="submit">Watch</button>
+            <button (click)="bookmarkIt()" [title]="'Bookmark It !!'" class="btn btn-warning" type="button" id="bookmarkIt"><i class="fas fa-star"></i></button>
+            <button (click)="runUrl()" class="btn btn-danger" type="button" id="submit">Load Video</button>
         </div>
     </div>
 </div>
 <div>
-    <div [innerHtml]="iframe_html" id="iframeDiv"></div>
+    <div class="myDiv">
+        <div [innerHtml]="iframe_html" id="iframeDiv"></div>
+    </div>
 </div>

@@ -1,9 +1,5 @@
-<li>
-        <a href="#">1</a>
-    </li>
-    <li>
-        <a href="#">Home 2</a>
-    </li>
-    <li>
-        <a href="#">Home 3</a>
-</li>
+<div *ngFor="let item of history">
+        <li>
+            <a href="#">{{item}}</a>
+        </li>
+    </div>

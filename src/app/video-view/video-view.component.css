@@ -4,8 +4,37 @@
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
-#iframeDiv{
-    margin: 0px;
+.centerP{
+    text-align: center;
+}
+.form-row{
+    margin-top: 10px;
+}
+#submit{
+    transition: all 0.2s ease-in-out;
+}
+p{
+    margin-bottom: 0;
+}
+#submit:hover{
+    width: 140%;
+    transition: all 0.2s ease-in-out;
+}
+#bookmarkIt{
+    width: 10%;
+    margin-bottom: 5%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-color: yellow;
+    transition: all 0.4s ease-in-out;
+}
+#bookmarkIt:hover{
+    width: 400%;
+    margin-bottom: 5%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-color: yellow;
+    transition: all 0.5s ease-in-out;
 }
 #btnGroup{
     width: 100%;
@@ -18,6 +47,7 @@ input{
     border-bottom-right-radius: 0;
     border-bottom-color: #4d0000;
 }
+
 input:focus{
     border-color: #4d0000;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
@@ -29,4 +59,9 @@ input:focus{
 .btn-danger:hover{
     background-color: #330000;
     border-color: #330000;
+}
+
+.myDiv{
+    background-color: #4d0000;;
+    border-color: #4d0000;;
 }
