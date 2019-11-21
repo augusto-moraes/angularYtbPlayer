@@ -7,15 +7,15 @@
                 </a>
             </li>
             <li>
-                <a href="#bookmarksSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Bookmarks</a>
+                <a href="#bookmarksSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Bookmarks<button *ngIf="count != 0"><span *ngIf="count != 0" class="badge badge-light">{{count}}</span></button></a>
                 <ul class="collapse list-unstyled" id="bookmarksSubmenu">
-                    <bookmarks></bookmarks>
+                    <bookmarks [youtubeUrl]="youtubeUrl"></bookmarks>
                 </ul>
             </li>
             <li>
                 <a href="#historySubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">History</a>
                 <ul class="collapse show list-unstyled" id="historySubmenu">
-                    <history></history>
+                    <history [youtubeUrl]="youtubeUrl"></history>
                 </ul>
             </li>
         </ul>

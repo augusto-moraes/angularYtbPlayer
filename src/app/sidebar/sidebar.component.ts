@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { $ } from 'protractor';
+import { Input } from '@angular/core';
 
 @Component({
   selector: 'sidebar',
@@ -7,7 +7,8 @@ import { $ } from 'protractor';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent implements OnInit {
-
+  @Input() youtubeUrl;
+  count = 0;
   constructor() { }
 
   ngOnInit() {
