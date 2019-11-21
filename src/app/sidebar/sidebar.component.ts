@@ -8,8 +8,12 @@ import { Input } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
   @Input() youtubeUrl;
-  count = 0;
+  count = this.getBookmarksSize();
   constructor() { }
+  getBookmarksSize(){
+    let localStorageItem = JSON.parse(localStorage.getItem('bookmark'));
+    return localStorageItem == null ? 0 : localStorageItem.length;
+  }
 
   ngOnInit() {
   }
