@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { Input } from '@angular/core';
 
 @Component({
@@ -9,7 +10,7 @@ import { Input } from '@angular/core';
 export class BookmarksComponent implements OnInit {
   @Input() youtubeUrl;
   bookmarks = this.getBookmarks();
-  constructor() { 
+  constructor(private toastr: ToastrService) { 
     
   }
   getBookmarks(){
@@ -29,6 +30,10 @@ export class BookmarksComponent implements OnInit {
     selBox.select();
     document.execCommand('copy');
     document.body.removeChild(selBox);
+  }
+
+  successToast(){
+    this.toastr.success("Url Copied to Clipboard.","",{timeOut:3000})
   }
   
   ngOnInit() {

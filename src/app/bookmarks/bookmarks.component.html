@@ -1,5 +1,5 @@
 <div *ngFor="let bookmark of bookmarks">
     <li>
-        <a href="#" (click)="copyMessage(bookmark)">{{bookmark}}</a>
+        <a href="#" (click)="copyMessage(bookmark); successToast()">{{bookmark}}</a>
     </li>
 </div>

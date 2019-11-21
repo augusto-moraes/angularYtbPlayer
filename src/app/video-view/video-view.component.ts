@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EmbedVideoService } from 'ngx-embed-video';
+import { ToastrService } from 'ngx-toastr';
 import { Input } from '@angular/core';
 
 @Component({
@@ -15,7 +16,7 @@ export class VideoViewComponent implements OnInit {
   history = [];
   bookmarks = [];
   
-  constructor(private embedService: EmbedVideoService) {
+  constructor(private embedService: EmbedVideoService, private toastr: ToastrService) {
     this.iframe_html = this.embedService.embed(this.youtubeUrl, {
       query: { portrait: 0, color: '333' },
       attr: { width: 800, height: 400 }
@@ -47,6 +48,10 @@ export class VideoViewComponent implements OnInit {
   keyDownFunction(event) {
     if(event.keyCode == 13) 
       this.runUrl();
+  }
+
+  successToast(){
+    this.toastr.success("Video successfully bookmarked.","",{timeOut:3000})
   }
 
   ngOnInit() {

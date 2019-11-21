@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { Input } from '@angular/core';
 
 @Component({
@@ -9,7 +10,7 @@ import { Input } from '@angular/core';
 export class HistoryComponent implements OnInit {
   @Input() youtubeUrl;
   history = this.getHistory();
-  constructor() { 
+  constructor(private toastr: ToastrService) { 
   
   }
   getHistory(){
@@ -28,6 +29,9 @@ export class HistoryComponent implements OnInit {
     selBox.select();
     document.execCommand('copy');
     document.body.removeChild(selBox);
+  }
+  successToast(){
+    this.toastr.success("Url Copied to Clipboard.","",{timeOut:3000})
   }
   ngOnInit() {
   }

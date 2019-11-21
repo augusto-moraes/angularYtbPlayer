@@ -7,7 +7,7 @@
     <div class="col-md-8">
         <input onClick="this.setSelectionRange(0, this.value.length)" type="text" class="form-control" name="youtubeUrl" [(ngModel)]="youtubeUrl" placeholder="Youtube URL" aria-label="Youtube URL" aria-describedby="submit" (keydown)="keyDownFunction($event)">
         <div class="btn-group" role="group" id="btnGroup">
-            <button (click)="bookmarkIt()" [title]="'Bookmark It !!'" class="btn btn-warning" type="button" id="bookmarkIt"><i class="fas fa-star"></i></button>
+            <button (click)="bookmarkIt(); successToast()" [title]="'Bookmark It !!'" class="btn btn-warning" type="button" id="bookmarkIt"><i class="fas fa-star"></i></button>
             <button (click)="runUrl()" class="btn btn-danger" type="button" id="submit">Load Video</button>
         </div>
     </div>
